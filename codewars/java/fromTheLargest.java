@@ -1,4 +1,4 @@
-Task:
+/* Task:
 Given a 'long' number, Return The Maximum number could be formed from the digits of the number given.
 
 Notes:
@@ -9,7 +9,7 @@ Input >> Output Examples:
 1- maxNumber (17693284) ==> return (98764321)
 
 Explanation:
-As 98764321 is The Maximum number could be formed from the digits of the number 17693284.
+As 98764321 is The Maximum number could be formed from the digits of the number 17693284.*/
 
 import java.util.*;
 
