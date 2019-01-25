@@ -20,8 +20,8 @@ class MaxDiffLength {
           return -1;
         }
         
-        TreeSet<Integer> a1Set = new TreeSet<Integer>(); 
-        TreeSet<Integer> a2Set = new TreeSet<Integer>(); 
+        HashSet<Integer> a1Set = new HashSet<Integer>(); 
+        HashSet<Integer> a2Set = new HashSet<Integer>();  
  
         for (int i = 0; i<a1.length; i++) {  
             a1Set.add(a1[i].length());
