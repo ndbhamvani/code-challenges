@@ -1,5 +1,5 @@
 /* Task:
-Given a 'long' number, Return The Maximum number could be formed from the digits of the number given.
+Given a 'long' number, Return The Maximum number that could be formed from the digits given.
 
 Notes:
 Only Positve numbers passed to the function , numbers Contain digits [1:9] inclusive.
