@@ -13,7 +13,7 @@ public class ArrayReverser
 {
    public static String[] reverse(String[] a)
    {
-//Part 1: Establishing original word lengths.
+//Part 1: Establishing original word lengths and setting up index values for later use.
        ArrayList<Integer> wordSize = new ArrayList<Integer>();
        ArrayList<Integer> index = new ArrayList<Integer>(); 
        int count = 0;
