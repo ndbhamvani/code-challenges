@@ -28,16 +28,16 @@ public class ArrayReverser
        
 //Part 3: Reversing each individual word via String reversal methods. 
        String str = "";
-       String strWithComma = "";
        for (String s : a) {
            str += new StringBuilder(s).reverse();
        }
 
 //Part 4: Seperating words by comma. 
+       String strWithComma = "";
        for (int y = 0; y<index.size(); y++) {
            strWithComma += str.substring(index.get(y)-wordSize.get(y), index.get(y)) + ", ";
        }
-           String result = strWithComma + str.substring(index.get(index.size()-1));
+       String result = strWithComma + str.substring(index.get(index.size()-1));
         
 //Part 5: Returning result as an array by splitting string wherever there is comma. 
        return result.split(", ");
