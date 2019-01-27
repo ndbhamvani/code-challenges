@@ -32,7 +32,7 @@ public class ArrayReverser
            str += new StringBuilder(s).reverse();
        }
 
-//Part 4: Seperating words by comma. 
+//Part 4: Seperating words with comma by taking previous index values (Part 1). 
        String strWithComma = "";
        for (int y = 0; y<index.size(); y++) {
            strWithComma += str.substring(index.get(y)-wordSize.get(y), index.get(y)) + ", ";
