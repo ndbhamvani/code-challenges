@@ -4,7 +4,6 @@ Select all page web elements and enter details.
 Finally, click 'Submit' button.
 */
 
-
 package com.java.examples;
 
 import org.openqa.selenium.By;
@@ -12,9 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-
 public class facebookTestClass {
-	
 public static void main(String[] args) {
 		
 		//Set the system property
@@ -77,8 +74,7 @@ public static void main(String[] args) {
 			
 		//Finding the WebElements for Select option Birth year	
 			WebElement submit = Driver.findElement(By.name("websubmit"));
-			submit.click();	
-			
+			submit.click();		
 	}
 
 }
