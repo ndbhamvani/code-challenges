@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  DemoKeywords.robot
+Test Teardown     Close All Browsers
 
 *** Variables ***
 ${URL}          http://the-internet.herokuapp.com/
