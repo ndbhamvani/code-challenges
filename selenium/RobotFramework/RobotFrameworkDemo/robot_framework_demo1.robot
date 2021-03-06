@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  DemoKeywords.robot
+Resource  PageObjects/MainPageObjects.robot
 Test Teardown     Close All Browsers
 
 *** Variables ***
@@ -9,5 +10,4 @@ ${BROWSER}      Firefox
 
 *** Test Cases ***
 The user can access website
-    Open Browser To Login Page
-
+    Open Browser To Login Page And Click First Link   
