@@ -1,4 +1,5 @@
-/* You're going on a trip with some students and it's up to you to keep track of how much money each Student has. A student is defined like this:
+/* You're going on a trip with some students and it's up to you to keep track of how much money each Student has. 
+A student is defined like this:
 
 class Student {
   constructor(name, fives, tens, twenties) {
