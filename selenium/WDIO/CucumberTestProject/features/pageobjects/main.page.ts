@@ -8,7 +8,7 @@ class MainPage extends Page {
      * define selectors using getter methods
      */
     get dropdownLink () { return $('[href="/dropdown"]') }
-    get addRemoveElementsLink () { return $('[href="/dropdown"]') }
+    get addRemoveElementsLink () { return $('[href="/add_remove_elements/"]') }
 
 
     /**
@@ -17,6 +17,10 @@ class MainPage extends Page {
      */
     async clickDropDown () {
         await (await this.dropdownLink).click();
+    }
+
+    async selectPageLink (link) {
+        await (await $(`[href="/${link}"]`)).click();
     }
 
     /**

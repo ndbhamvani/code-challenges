@@ -11,7 +11,7 @@ Feature: Testing the Login page
       | tomsmith | SuperSecretPassword! | You logged into a secure area! |
       | foobar   | barfoo               | Your username is invalid!      |
 
-  @test
+  @dropdown
   Scenario Outline: As a user, I can access main page and click on dropdown link
 
     Given I am on the main page

@@ -13,22 +13,27 @@ const pages = {
     addRemoveElements: AddRemoveElementsPage,
 }
 
+//GIVEN
 Given(/^I am on the (\w+) page$/, async (page) => {
     await pages[page].open()
 });
 
+
+//WHEN
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {
     await LoginPage.login(username, password)
 });
 
-When(/^I click the dropdown link on the (\w+) page$/, async (page) => {
-    await pages[page].clickDropDown()
+When(/^I click the (\w+) link on the (\w+) page$/, async (link, page) => {
+    await pages[page].selectPageLink(link);
 });
 
 When(/^I select option (\w+) on the (\w+) menu$/, async (value, page) => {
     await pages[page].selectDropDownMenu(value)
 });
 
+
+//THEN
 Then(/^I should see a flash message saying (.*)$/, async (message) => {
     await expect(SecurePage.flashAlert).toBeExisting();
     await expect(SecurePage.flashAlert).toHaveTextContaining(message);

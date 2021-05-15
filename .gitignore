@@ -4,3 +4,7 @@ selenium/RobotFramework/RobotFrameworkDemo/report.html
 selenium/RobotFramework/RobotFrameworkDemo/log.html
 selenium/RobotFramework/RobotFrameworkDemo/output.xml
 *.log
+.DS_Store
+selenium/.DS_Store
+selenium/WDIO/.DS_Store
+selenium/WDIO/CucumberTestProject/.DS_Store
