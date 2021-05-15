@@ -15,10 +15,6 @@ class MainPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async clickDropDown () {
-        await (await this.dropdownLink).click();
-    }
-
     async selectPageLink (link) {
         await (await $(`[href="/${link}"]`)).click();
     }

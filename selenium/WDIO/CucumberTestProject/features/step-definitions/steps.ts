@@ -24,7 +24,7 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
     await LoginPage.login(username, password)
 });
 
-When(/^I click the (\w+) link on the (\w+) page$/, async (link, page) => {
+When(/^I click the (.+) link on the (\w+) page$/, async (link, page) => {
     await pages[page].selectPageLink(link);
 });
 
@@ -39,9 +39,9 @@ Then(/^I should see a flash message saying (.*)$/, async (message) => {
     await expect(SecurePage.flashAlert).toHaveTextContaining(message);
 });
 
-Then(/^The header should say: (.*)$/, async (heading) => {
-    await expect(DropDownPage.pageHeading).toBeExisting();
-    await expect(DropDownPage.pageHeading).toHaveText(heading);
+Then(/^The header on the (.*) page should say: (.*)$/, async (page, heading) => {
+    await expect(pages[page].pageHeading).toBeExisting();
+    await expect(pages[page].pageHeading).toHaveText(heading);
 });
 
 Then(/^the dropdown text for selected option (.*) should say: (.*)$/, async (value, selectionText) => {

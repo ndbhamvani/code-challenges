@@ -16,7 +16,7 @@ Feature: Testing the Login page
 
     Given I am on the main page
     When I click the dropdown link on the main page
-    Then The header should say: Dropdown List
+    Then The header on the dropdown page should say: Dropdown List
 
 
   
@@ -31,11 +31,12 @@ Feature: Testing the Login page
       | 1      | Option 1  |
       | 2      | Option 2  |
 
-
+  @addremove
   Scenario Outline: As a user, I can access the Add/Remove Elements page and click relevant buttons
 
     Given I am on the main page
-    When I click the dropdown link on the main page
-    Then the dropdown text for selected option <value> should say: <selectionText>
+    When I click the add_remove_elements/ link on the main page
+    Then The header on the addRemoveElements page should say: Add/Remove Elements
+
 
   
