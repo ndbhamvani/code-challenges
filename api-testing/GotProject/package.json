@@ -1,0 +1,15 @@
+{
+  "name": "gotproject",
+  "version": "1.0.0",
+  "description": "Evaluating this node based API testing framework called Got",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "got": "^11.8.2"
+  },
+  "dependencies": {}
+}
