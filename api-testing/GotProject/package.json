@@ -4,14 +4,17 @@
   "description": "Evaluating this node based API testing framework called Got",
   "main": "",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
     "got": "^11.8.2",
-    "mocha": "^8.4.0"
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2"
   },
   "dependencies": {}
 }

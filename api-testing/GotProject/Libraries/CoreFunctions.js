@@ -1,3 +1,5 @@
+const config = require('../User/config');
+
 exports.respDateCode = (res) => {
   const headerDate = res.headers && res.headers.date ? res.headers.date : 'no response date';
   console.log('Status Code:', res.statusCode);
@@ -13,4 +15,12 @@ exports.getRespBody = (res) => {
 exports.prettyJSON = (res) => {
   const uglyJSON = this.getRespBody(res);
   return JSON.stringify(uglyJSON, null, 4);
+}
+
+exports.headers = () => {
+  return {   
+    'x-rapidapi-key':config.apiAccess(), 
+    'x-rapidapi-host':'covid-19-data.p.rapidapi.com', 
+    'useQueryString':'true'
+  }
 }
