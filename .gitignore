@@ -10,4 +10,4 @@ selenium/WDIO/.DS_Store
 selenium/WDIO/CucumberTestProject/.DS_Store
 api-testing/GotProject/User/config.js
 unit-testing/CodeChallengeFramework/node_modules/*
-unit-testing/CodeChallengeFramework/package-lock.json
+package-lock.json
