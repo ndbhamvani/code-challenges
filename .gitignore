@@ -9,3 +9,4 @@ selenium/.DS_Store
 selenium/WDIO/.DS_Store
 selenium/WDIO/CucumberTestProject/.DS_Store
 api-testing/GotProject/User/config.js
+unit-testing/CodeChallengeFramework/node_modules/*
