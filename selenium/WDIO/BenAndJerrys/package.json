@@ -1,0 +1,22 @@
+{
+  "name": "benandjerrys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-homepage": "npx wdio run wdio.conf.ts --cucumberOpts.tagExpression='@home'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^7.7.3",
+    "@wdio/cucumber-framework": "^7.7.3",
+    "@wdio/local-runner": "^7.7.3",
+    "@wdio/spec-reporter": "^7.7.3",
+    "chromedriver": "^91.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "wdio-chromedriver-service": "^7.1.0"
+  }
+}
