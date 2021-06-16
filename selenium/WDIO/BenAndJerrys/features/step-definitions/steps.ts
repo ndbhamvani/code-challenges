@@ -12,7 +12,7 @@ Given(/^I am on the (\w+) page$/, async (page) => {
 }); 
 
 //When
-When(/^I click on the (.+) button$/, async (button, page) => {
+When(/^I click on the (.+) button on the (\w+) page$/, async (button, page) => {
     await pages[page].clickButton(button);
 });
 
