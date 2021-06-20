@@ -10,4 +10,4 @@ selenium/WDIO/.DS_Store
 selenium/WDIO/CucumberTestProject/.DS_Store
 api-testing/GotProject/User/config.js
 **/node_modules/
-*package-lock.json
+**/mochawesome-report/
