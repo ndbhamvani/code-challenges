@@ -4,7 +4,7 @@
   "description": "Evaluating this node based API testing framework called Got",
   "main": "",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --timeout 10000",
     "test:awesome": "mocha --reporter mochawesome || true",
     "open:report": "open mochawesome-report/mochawesome.html"
   },
