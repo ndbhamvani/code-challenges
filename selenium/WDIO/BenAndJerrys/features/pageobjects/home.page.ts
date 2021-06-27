@@ -5,13 +5,13 @@ class HomePage extends Page {
     get dialogBoxCloseButton () {return $('[class="stickyFooter"]')};
 
 
-    async clickButton (button) {
-        await (await $(`[class="${button}"]`)).click();
+    clickButton(button) {
+        return super.clickButton(button);
     }
 
 
-    async checkElement (element) {
-        await (await $(`[class="${element}"]`)).isExisting();
+    checkElement (element) {
+        return super.checkElement(element);
     }
 
     open() {
