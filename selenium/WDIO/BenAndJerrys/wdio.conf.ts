@@ -265,8 +265,11 @@ export const config: WebdriverIO.Config = {
      * @param {string}                 result.error    error stack if scenario failed
      * @param {number}                 result.duration duration of scenario in milliseconds
      */
-    // afterScenario: function (world, result) {
-    // },
+
+    afterScenario: function (world, result) {
+        browser.deleteCookies();
+    },
+
     /**
      *
      * Runs after a Cucumber Feature.
