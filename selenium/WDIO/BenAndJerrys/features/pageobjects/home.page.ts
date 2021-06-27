@@ -2,7 +2,7 @@ import Page from './page';
 
 class HomePage extends Page {
 
-    get dialogBoxCloseButton () {return $('[class="stickyFooter"]')};
+    get dialogBox () {return $('[class="stickyFooter"]')};
 
 
     clickButton(button) {
