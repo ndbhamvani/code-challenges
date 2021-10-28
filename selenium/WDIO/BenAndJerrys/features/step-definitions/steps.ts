@@ -24,8 +24,8 @@ When(/^I click on the (.+) button on the (\w+) page$/, async (button, page) => {
 });
 
 //Then
-Then(/^the (\w+) no longer appears on the (\w+) page$/, async (element, page) => {
-    await !expect(pages[page].checkElement(element)).toBeExisting()
+Then(/^the (\w+) page (\w+) element no longer appears$/, async (page, element) => {
+    await !expect(pages[page].checkElement(buttons[element])).toBeExisting()
 });
 
 Then(/^the user is presented with (.*) page$/, async (title) => {

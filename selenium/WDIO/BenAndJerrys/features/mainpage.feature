@@ -5,7 +5,7 @@ Scenario Outline: As a user, I can access the homepage and dismiss sticky dialog
 
     Given I am on the home page
     When I click on the orderNowClose button on the home page
-    Then the stickyFooter no longer appears on the home page
+    Then the home page orderNow element no longer appears
 
 
 @home
