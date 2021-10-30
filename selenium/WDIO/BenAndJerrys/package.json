@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-homepage": "npx wdio run wdio.conf.ts --cucumberOpts.tagExpression='@home'"
+    "test-homepage": "npx wdio run wdio.conf.ts --cucumberOpts.tagExpression='@browseflavours'"
   },
   "author": "",
   "license": "ISC",

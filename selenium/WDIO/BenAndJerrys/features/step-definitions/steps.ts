@@ -2,15 +2,17 @@ import {Given, When, Then} from '@cucumber/cucumber';
 
 import HomePage from '../pageobjects/home.page';
 import InstantDelivery from '../pageobjects/instantDelivery.page';
+import CookieDoughChunks from '../pageobjects/cookieDoughChunks.page';
 
 const pages = {
     home: HomePage,
-    instantDelivery: InstantDelivery
+    instantDelivery: InstantDelivery,
+    cookieDoughChunks: CookieDoughChunks
 }
 
 const buttons = {
-    orderNowClose: 'stickyFooter-close',
-    orderNow: 'stickyFooter-button btn',
+    browseFlavoursClose: 'stickyFooter-close',
+    browseFlavours: 'stickyFooter-button btn',
 }
 
 //Given

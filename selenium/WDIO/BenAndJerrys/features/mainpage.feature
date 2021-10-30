@@ -14,3 +14,11 @@ Scenario Outline: As a user, I can access the Instant Delivery page when clickin
     Given I am on the home page
     When I click on the orderNow button on the home page
     Then the user is presented with Ben & Jerry’s Instant Delivery page
+
+
+@browseflavours
+Scenario Outline: As a user, I can access the Instant Delivery page when clicking 'Browse Flavours' on sticky dialogue box 
+
+    Given I am on the home page
+    When I click on the browseFlavours button on the home page
+    Then the user is presented with Ben & Jerry’s Cookie Dough Chunks page
