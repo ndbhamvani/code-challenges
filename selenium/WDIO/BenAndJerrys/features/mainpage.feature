@@ -8,7 +8,7 @@ Scenario Outline: As a user, I can access the homepage and dismiss sticky dialog
     Then the home page orderNow element no longer appears
 
 
-@home
+@ordernow
 Scenario Outline: As a user, I can access the Instant Delivery page when clicking 'Order Now' on sticky dialogue box 
 
     Given I am on the home page
