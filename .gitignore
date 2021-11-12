@@ -9,5 +9,6 @@ selenium/.DS_Store
 selenium/WDIO/.DS_Store
 selenium/WDIO/CucumberTestProject/.DS_Store
 api-testing/GotProject/User/config.js
+front-end/VueJS/Covid19App/User
 **/node_modules/
 **/mochawesome-report/
