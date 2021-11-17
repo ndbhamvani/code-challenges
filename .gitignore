@@ -10,5 +10,9 @@ selenium/WDIO/.DS_Store
 selenium/WDIO/CucumberTestProject/.DS_Store
 api-testing/GotProject/User/config.js
 front-end/VueJS/Covid19App/User
+back-end/MongoExpressNode/movies-app/data
+back-end/MongoExpressNode/bank-esg-api/data
+**/environment.js
 **/node_modules/
 **/mochawesome-report/
+

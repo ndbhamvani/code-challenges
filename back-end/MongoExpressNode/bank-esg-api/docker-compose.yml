@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    container_name: app_bank_esg
+    image: nitinbhamvani/app_bank_esg
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    links:
+      - mongo
+  mongo:
+    container_name: mongo_bank_esg
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - '27017:27017'
