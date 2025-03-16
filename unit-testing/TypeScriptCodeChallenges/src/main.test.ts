@@ -21,6 +21,9 @@ describe('buildString function', () => {
         expect(buildString()).toBe('Not a valid value!');
         expect(buildString('')).toBe('Not a valid value!');
         expect(buildString('Cheese','','Milk')).toBe('Not a valid value!');
+        //expect(buildString(234)).toBe('Unexpected value!');
+        //expect(buildString(undefined)).toBe('Unexpected value!');
+        //expect(buildString('Cheese', 'Milk', null)).toBe('Unexpected value!');
     })
 })
 

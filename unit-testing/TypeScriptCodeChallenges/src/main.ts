@@ -14,23 +14,36 @@ export function noBoringZeros(n: number): number {
 
 
 
-  export function buildString(... template:string[]):string {
+  export function buildString(...template: string[]): string {
+    try {
+        const invalidChars: string = '!£$%^&*@#~?';
 
-    const invalidChars:string  = '!£$%^&*@#~?';
-    const joinedTemplate = template.join(',');
-    const splitTemplate = joinedTemplate.split('');
-    let invalidCharCount:number = 0;
+        const unexpectedValue = template.some(val => typeof val !== 'string');
+        if (unexpectedValue) {
+            throw new Error('Unexpected value!');
+        }
 
-    for (let letter in splitTemplate){
-        for (let char of invalidChars){
-            splitTemplate[letter].includes(char) ? invalidCharCount++ : 0
-        } 
+        const joinedTemplate = template.join(',');
+        const splitTemplate = joinedTemplate.split('');
+        let invalidCharCount: number = 0;
+
+        for (let letter in splitTemplate) {
+            for (let char of invalidChars) {
+                splitTemplate[letter].includes(char) ? invalidCharCount++ : 0;
+            }
+        }
+
+        const invalidResult =
+            invalidCharCount > 0 ||
+            template.some(val => val === '') ||
+            template.length === 0;
+
+        return invalidResult
+            ? 'Not a valid value!'
+            : `I like ${template.join(', ')}!`;
+    } catch (error) {
+        return 'Unexpected value!';
     }
+}
 
-    const invalidResult = invalidCharCount > 0  || 
-            template.some(val => val === '')    ||
-                        template.length === 0
-
-    return invalidResult ? 'Not a valid value!' : `I like ${template.join(', ')}!`
-  }
   
