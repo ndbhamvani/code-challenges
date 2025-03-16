@@ -1,15 +1,10 @@
 export function invalidCharacterCheck(template: string[]):boolean {
+    const invalidChars = '!£$%^&*@#~?'
     const joinedTemplate = template.join(',');
-        const splitTemplate = joinedTemplate.split('');
-        let invalidCharCount: number = 0;
+    const individualTemplateChars = [...joinedTemplate]
 
-        for (let letter in splitTemplate) {
-            for (let char of '!£$%^&*@#~?') {
-                splitTemplate[letter].includes(char) ? invalidCharCount++ : 0;
-            }
-        }
-
-        return invalidCharCount > 0 
+    return individualTemplateChars.some(char => invalidChars.includes(char))
+        
 }
 
 
