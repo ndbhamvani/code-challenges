@@ -1,3 +1,5 @@
+import { invalidCharacterCheck, missingValueCheck } from "./validationHelpers";
+
 export function noBoringZeros(n: number): number {
     let count:number = 0;
     for (let i = n.toString().length - 1; i >= 0; i--) {
@@ -16,27 +18,15 @@ export function noBoringZeros(n: number): number {
 
   export function buildString(...template: string[]): string {
     try {
-        const invalidChars: string = '!£$%^&*@#~?';
 
         const unexpectedValue = template.some(val => typeof val !== 'string');
         if (unexpectedValue) {
             throw new Error('Unexpected value!');
         }
 
-        const joinedTemplate = template.join(',');
-        const splitTemplate = joinedTemplate.split('');
-        let invalidCharCount: number = 0;
-
-        for (let letter in splitTemplate) {
-            for (let char of invalidChars) {
-                splitTemplate[letter].includes(char) ? invalidCharCount++ : 0;
-            }
-        }
-
         const invalidResult =
-            invalidCharCount > 0 ||
-            template.some(val => val === '') ||
-            template.length === 0;
+            invalidCharacterCheck(template)     ||
+            missingValueCheck(template)
 
         return invalidResult
             ? 'Not a valid value!'
