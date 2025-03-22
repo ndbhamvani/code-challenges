@@ -16,24 +16,37 @@ export function noBoringZeros(n: number): number {
 
 
 
-  export function buildString(...template: string[]): string {
-    try {
+export function buildString(...template: string[]): string {
+  try {
 
-        const unexpectedValue = template.some(val => typeof val !== 'string');
-        if (unexpectedValue) {
-            throw new Error('Unexpected value!');
-        }
+      const unexpectedValue = template.some(val => typeof val !== 'string');
+      if (unexpectedValue) {
+          throw new Error('Unexpected value!');
+      }
 
-        const invalidResult =
-            invalidCharacterCheck(template)     ||
-            missingValueCheck(template)
+      const invalidResult =
+          invalidCharacterCheck(template)     ||
+          missingValueCheck(template)
 
-        return invalidResult
-            ? 'Not a valid value!'
-            : `I like ${template.join(', ')}!`;
-    } catch (error) {
-        return 'Unexpected value!';
-    }
+      return invalidResult
+          ? 'Not a valid value!'
+          : `I like ${template.join(', ')}!`;
+  } catch (error) {
+      return 'Unexpected value!';
+  }
 }
 
+
+
+export function nextId(ids: number[]): number {
   
+  const sortedIds = [...new Set(ids.sort((a, b) => a - b))];
+
+  for (let i = 0; i < ids.length; i++) {
+    if (i !== sortedIds[i]){
+      return i
+    }
+  }
+
+  return ids.length
+}
