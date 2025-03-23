@@ -15,4 +15,5 @@ back-end/MongoExpressNode/bank-esg-api/data
 **/environment.js
 **/node_modules/
 **/mochawesome-report/
+go.sum
 
